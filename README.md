@@ -82,7 +82,7 @@ https://github.com/JabRef/jabref/commit/0a7060ee314f2edd5230ad970bb4c40804326007
 
 
 
-<Yiyang Sun>
+< Yiyang Sun>
 
 <Function 1 name>
 
