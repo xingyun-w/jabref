@@ -14,10 +14,11 @@ Programming language: Java
 ### Existing tool
 
 <Inform the name of the existing tool that was executed and how it was executed>
-Jacoco
-The build.gradle file was configured to include the JaCoCo plugin. 
+Jacoco.
+
+The build.gradle file was configured to include the JaCoCo plugin.
 plugins {
-    id 'jacoco'
+id 'jacoco'
 }
 
 
@@ -45,9 +46,11 @@ Run  ./gradlew clean test jacocoTestReport
 ### Your own coverage tool
 
 <The following is supposed to be repeated for each group member>
+
 <Xingyun Wang>
+
 <Function 1 name>
-equals() 
+equals()
 Path：jabref > src > main > java > org > jabref > model > groups > ExplicitGroup > equals
 
 
@@ -77,7 +80,9 @@ https://github.com/JabRef/jabref/commit/0a7060ee314f2edd5230ad970bb4c40804326007
 
 
 <Yiyang Sun>
+
 <Function 1 name>
+
 getMainFileDirectory()
 
 Path:
@@ -123,7 +128,9 @@ Check printout info:
 build/reports/test/index.html
 
 <YuliWang>
+
 	<Function 1 name>
+
 public boolean equals(Object o)
 src/main/java/org/jabref/gui/theme/Theme-public boolean equals(Object o)
 
@@ -135,6 +142,7 @@ src/main/java/org/jabref/gui/theme/Theme-public boolean equals(Object o)
 
 
 <Function 2 name>
+
 void deleteAbbreviation()
 src/main/java/org/jabref/gui/preferences/journals/JournalAbbreviationsTabViewModel.java-public void deleteAbbreviation()
 
@@ -151,10 +159,13 @@ src/main/java/org/jabref/gui/preferences/journals/JournalAbbreviationsTabViewMod
 
 
 ## Coverage improvement
+
 ### Individual tests
 
 <The following is supposed to be repeated for each group member>
+
 <Xingyun Wang>
+
 <Test 1>
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
@@ -201,6 +212,7 @@ Improve 75%
 The console messages indicate that only the first branch is being hit. To cover all branches, I have added two test cases: one for handling the case where the result is null, and another for when there is no key binding.
 
 <Yiyang Sun>
+
 <Test 1>
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
@@ -243,6 +255,7 @@ There are four possible data scenarios for getWriteMetadatatoPdf(): Metadata, XM
 <Yuli Wang>
 
 <Test 1>
+
 for the Theme.euqals
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
@@ -277,6 +290,7 @@ The original tests are intertwined with other parts, making modifications cumber
 
 
 ### Overall
+
 <Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
 
 
