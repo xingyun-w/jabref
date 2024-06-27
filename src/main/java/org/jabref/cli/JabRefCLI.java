@@ -1,6 +1,8 @@
 package org.jabref.cli;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import javafx.util.Pair;
@@ -28,6 +30,15 @@ public class JabRefCLI {
 
     private final CommandLine cl;
     private final List<String> leftOver;
+
+    private static final Map<String, Boolean> BRANCH_COV = new HashMap<>();
+
+    static {
+        BRANCH_COV.put("brand_00", false);
+        BRANCH_COV.put("brand_01", false);
+        BRANCH_COV.put("brand_02", false);
+        BRANCH_COV.put("brand_03", false);
+    }
 
     public JabRefCLI(String[] args) throws ParseException {
         Options options = getOptions();
@@ -164,9 +175,27 @@ public class JabRefCLI {
     }
 
     public String getWriteMetadatatoPdf() {
+        if ( cl.hasOption("writeMetadatatoPdf") ) {
+            BRANCH_COV.put("brand_00", true);
+        } else if ( cl.hasOption("writeXMPtoPdf") ) {
+            BRANCH_COV.put("brand_01", true);
+        } else if ( cl.hasOption("embeddBibfileInPdf") ) {
+            BRANCH_COV.put("brand_02", true);
+        } else {
+            BRANCH_COV.put("brand_03", true);
+        }
+
         return cl.hasOption("writeMetadatatoPdf") ? cl.getOptionValue("writeMetadatatoPdf") :
                 cl.hasOption("writeXMPtoPdf") ? cl.getOptionValue("writeXMPtoPdf") :
                         cl.hasOption("embeddBibfileInPdf") ? cl.getOptionValue("embeddBibfileInPdf") : null;
+    }
+
+    public static void printCov() {
+        BRANCH_COV.forEach((branch, hit) -> System.out.println( branch + " was " + ( hit ? "hit" : "not hit" )));
+    }
+
+    public static void resetCov() {
+        BRANCH_COV.replaceAll( (branch, hit) -> false );
     }
 
     public String getJumpToKey() {

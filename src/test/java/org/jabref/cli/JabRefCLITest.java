@@ -5,10 +5,14 @@ import java.util.List;
 
 import javafx.util.Pair;
 
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.ParseException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
 
 class JabRefCLITest {
 
@@ -149,5 +153,71 @@ class JabRefCLITest {
                 """;
 
         assertEquals(expected, JabRefCLI.alignStringTable(given));
+    }
+
+    private CommandLine cl;
+    private JabRefCLI jabRefCLI;
+
+    @BeforeEach
+    void setup() throws ParseException, NoSuchFieldException, IllegalAccessException {
+        cl = Mockito.mock(CommandLine.class);
+        jabRefCLI = new JabRefCLI(new String[0]);
+
+        java.lang.reflect.Field clField = JabRefCLI.class.getDeclaredField("cl");
+        clField.setAccessible(true);
+
+        clField.set(jabRefCLI, cl);
+    }
+
+    @Test
+    void testGetWriteMetadatatoPdf_WriteMetadatatoPdf() {
+        when(cl.hasOption("writeMetadatatoPdf")).thenReturn(true);
+        when(cl.getOptionValue("writeMetadatatoPdf")).thenReturn("Metadata_value");
+
+        assertEquals("Metadata_value", jabRefCLI.getWriteMetadatatoPdf());
+
+        System.out.println("testing branch_00:");
+        JabRefCLI.printCov();
+        JabRefCLI.resetCov();
+    }
+
+    @Test
+    void testGetWriteMetadatatoPdf_WriteXMPtoPdf() {
+        when(cl.hasOption("writeMetadatatoPdf")).thenReturn(false);
+        when(cl.hasOption("writeXMPtoPdf")).thenReturn(true);
+        when(cl.getOptionValue("writeXMPtoPdf")).thenReturn("XMP_value");
+
+        assertEquals("XMP_value", jabRefCLI.getWriteMetadatatoPdf());
+
+        System.out.println( "testing branch_01: " );
+        JabRefCLI.printCov();
+        JabRefCLI.resetCov();
+    }
+
+    @Test
+    void testGetWriteMetadatatoPdf_EmbeddBibfileInPdf() {
+        when(cl.hasOption("writeMetadatatoPdf")).thenReturn(false);
+        when(cl.hasOption("writeXMPtoPdf")).thenReturn(false);
+        when(cl.hasOption("embeddBibfileInPdf")).thenReturn(true);
+        when(cl.getOptionValue("embeddBibfileInPdf")).thenReturn("embeddBibfile_value");
+
+        assertEquals("embeddBibfile_value", jabRefCLI.getWriteMetadatatoPdf());
+
+        System.out.println( "testing branch_02: " );
+        JabRefCLI.printCov();
+        JabRefCLI.resetCov();
+    }
+
+    @Test
+    void testGetWriteMetadatatoPdf_Null() {
+        when(cl.hasOption("writeMetadatatoPdf")).thenReturn(false);
+        when(cl.hasOption("writeXMPtoPdf")).thenReturn(false);
+        when(cl.hasOption("embeddBibfileInPdf")).thenReturn(false);
+
+        assertNull(jabRefCLI.getWriteMetadatatoPdf());
+
+        System.out.println( "testing branch_03: " );
+        JabRefCLI.printCov();
+        JabRefCLI.resetCov();
     }
 }
