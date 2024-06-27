@@ -1,6 +1,3 @@
-Detailed documentation with screenshots can be found in the [README.md.pdf](https://github.com/xingyun-w/jabref/blob/main/README.md.pdf).
-
-
 ﻿# Report for Assignment 1
 ## Project chosen
 
