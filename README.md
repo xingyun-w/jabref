@@ -17,6 +17,7 @@ Programming language: Java
 Jacoco.
 
 The build.gradle file was configured to include the JaCoCo plugin.
+
 <img width="439" alt="image" src="https://github.com/xingyun-w/jabref/assets/114107432/b655ebfb-4a26-406c-94d8-fe3024ac544b">
 
 
