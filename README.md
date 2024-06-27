@@ -45,7 +45,6 @@ Run  ./gradlew clean test jacocoTestReport
 ### Your own coverage tool
 
 <The following is supposed to be repeated for each group member>
-<Group member name>
 <Xingyun Wang>
 <Function 1 name>
 equals() 
@@ -77,7 +76,6 @@ https://github.com/JabRef/jabref/commit/0a7060ee314f2edd5230ad970bb4c40804326007
 
 
 
-<Group member name>
 <Yiyang Sun>
 <Function 1 name>
 getMainFileDirectory()
@@ -124,7 +122,6 @@ Run:
 Check printout info:
 build/reports/test/index.html
 
-<Group member name>
 <YuliWang>
 	<Function 1 name>
 public boolean equals(Object o)
@@ -135,6 +132,7 @@ src/main/java/org/jabref/gui/theme/Theme-public boolean equals(Object o)
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 ./gradlew test --tests "org.jabref.gui.theme.ThemeTest"
+
 
 <Function 2 name>
 void deleteAbbreviation()
@@ -156,7 +154,6 @@ src/main/java/org/jabref/gui/preferences/journals/JournalAbbreviationsTabViewMod
 ### Individual tests
 
 <The following is supposed to be repeated for each group member>
-<Group member name>
 <Xingyun Wang>
 <Test 1>
 
@@ -203,7 +200,6 @@ Improve 75%
 
 The console messages indicate that only the first branch is being hit. To cover all branches, I have added two test cases: one for handling the case where the result is null, and another for when there is no key binding.
 
-<Group member name>
 <Yiyang Sun>
 <Test 1>
 
@@ -244,7 +240,6 @@ The coverage has improved by 100%.
 
 There are four possible data scenarios for getWriteMetadatatoPdf(): Metadata, XMP, embeddBibfile, and null. Therefore, four tests need to be written to cover these scenarios. Additionally, before each test, it is essential to create a JabRefCLI object and mock the command line because getWriteMetadatatoPdf() retrieves its information from the command line.
 
-<Group member name>
 <Yuli Wang>
 
 <Test 1>
@@ -294,13 +289,13 @@ The coverage has improved by 1%，from 47% to 48%.
 
 <Write what each group member did>
 
-<Xingyun Wang>
+Xingyun Wang:
 Instrument and improve code coverage of equals() and get().
 
-<Yiyang Sun>
+Yiyang Sun:
 Instrument and improve code coverage of getMainFileDirectory()
- and getWriteMetadatatoPdf().
+and getWriteMetadatatoPdf().
 
-<Yuli Wang>
+Yuli Wang:
 Instrument and improve code coverage of deleteAbbreviation() and boolean equals(Object o).
 
