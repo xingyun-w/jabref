@@ -1,3 +1,9 @@
+详细文档可以在 [jabref/README.md.pdf](./jabref/README.md.pdf) 中找到。
+
+![readme.pdf](./jabref/README.md.pdf)
+
+
+
 ﻿# Report for Assignment 1
 ## Project chosen
 
