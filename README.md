@@ -47,7 +47,7 @@ Run  ./gradlew clean test jacocoTestReport
 
 <The following is supposed to be repeated for each group member>
 
-<Xingyun Wang>
+< Xingyun Wang>
 
 <Function 1 name>
 equals()
