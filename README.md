@@ -1,7 +1,4 @@
-详细文档可以在 [jabref/README.md.pdf](./jabref/README.md.pdf) 中找到。
-
-![readme.pdf](./jabref/README.md.pdf)
-
+Detailed documentation with screenshots can be found in the [README.md.pdf](https://github.com/xingyun-w/jabref/blob/main/README.md.pdf).
 
 
 ﻿# Report for Assignment 1
