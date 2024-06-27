@@ -136,7 +136,7 @@ src/main/java/org/jabref/gui/theme/Theme-public boolean equals(Object o)
 
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
-
+https://github.com/JabRef/jabref/commit/452950e5ed1ffcbdb3368fbf97cbc3c097582e59
 <Provide a screenshot of the coverage results output by the instrumentation>
 ./gradlew test --tests "org.jabref.gui.theme.ThemeTest"
 
@@ -147,10 +147,7 @@ void deleteAbbreviation()
 src/main/java/org/jabref/gui/preferences/journals/JournalAbbreviationsTabViewModel.java-public void deleteAbbreviation()
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
-
-
-
-
+https://github.com/JabRef/jabref/commit/59f312b61265b8ca3766f749aa6bbf7c982fa3b0
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 ./gradlew test --tests "org.jabref.gui.preferences.journals.JournalAbbreviationsViewModelTabTest"
@@ -259,7 +256,7 @@ There are four possible data scenarios for getWriteMetadatatoPdf(): Metadata, XM
 for the Theme.euqals
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
-
+https://github.com/JabRef/jabref/commit/2702701f0e8319a88f6d029ac85e5cecc8f575e5
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
 
@@ -274,7 +271,7 @@ For the equals method, there’s 4 main conditional branches: “this == o”,�
 <Test 2>
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
-
+https://github.com/JabRef/jabref/commit/c5393ddbcd821a47123ad54608531301ce4a6473
 
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
