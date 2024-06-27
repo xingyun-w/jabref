@@ -132,7 +132,7 @@ build/reports/test/index.html
 
 < YuliWang>
 
-	<Function 1 name>
+< Function 1 name >
 
 public boolean equals(Object o)
 src/main/java/org/jabref/gui/theme/Theme-public boolean equals(Object o)
