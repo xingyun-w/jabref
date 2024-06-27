@@ -24,6 +24,7 @@ The build.gradle file was configured to include the JaCoCo plugin.
 Run  ./gradlew clean test jacocoTestReport
 
 < Show the coverage results provided by the existing tool with a screenshot>
+<img width="624" alt="image" src="https://github.com/xingyun-w/jabref/assets/114107432/0e895104-7c97-4815-ab3f-3fc4dbbc493e">
 
 <img width="640" alt="image" src="https://github.com/xingyun-w/jabref/assets/114107432/3775b244-eaa0-4d89-a9ed-b5386f688ac8">
 
