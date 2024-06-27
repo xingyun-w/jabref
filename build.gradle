@@ -542,10 +542,10 @@ test {
     useJUnitPlatform {
         excludeTags 'DatabaseTest', 'FetcherTest', 'GUITest'
     }
-    testLogging {
-        events "passed", "skipped", "failed"
-        showStandardStreams = true
-    }
+//    testLogging {
+//        events "passed", "skipped", "failed"
+//        showStandardStreams = true
+//    }
 }
 
 
